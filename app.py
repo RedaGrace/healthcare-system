@@ -11,7 +11,7 @@ CORS(app)
 
 @app.route('/', methods = ['GET'])
 def home_page():
-    return render_template('index.html')
+    return render_template('templates/index.html')
 
 if __name__=='__main__':
     port = int(os.environ.get('PORT', 5000))
