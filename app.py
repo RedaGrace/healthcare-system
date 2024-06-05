@@ -6,18 +6,18 @@ import re
 import os
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 CORS(app)
 
-@app.route('/', methods = ['GET'])
+@app.route('/')
 def home_page():
     return render_template('index.html')
     
-@app.route('/symptoms', methods = ['GET'])   
+@app.route('/symptoms')   
 def symptoms_checker_page():
     return render_template('symptoms.html')
 
-@app.route('/first_aid', methods = ['GET'])
+@app.route('/first_aid')
 def first_aid_page():
     return render_template('first_aid.html')
 
