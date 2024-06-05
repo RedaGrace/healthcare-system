@@ -13,7 +13,7 @@ CORS(app)
 def home_page():
     return render_template('index.html')
     
-@app.route('/symptoms')   
+@app.route('/symptoms_checker')   
 def symptoms_checker_page():
     return render_template('symptoms.html')
 
