@@ -12,6 +12,14 @@ CORS(app)
 @app.route('/', methods = ['GET'])
 def home_page():
     return render_template('index.html')
+    
+@app.route('/symptoms', methods = ['GET'])   
+def symptoms_checker_page():
+    return render_template('symptoms.html')
+
+@app.route('/first_aid', methods = ['GET'])
+def first_aid_page():
+    return render_template('first_aid.html')
 
 if __name__=='__main__':
     port = int(os.environ.get('PORT', 5000))
