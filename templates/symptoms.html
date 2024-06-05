@@ -629,7 +629,7 @@ v               <label><input type="checkbox" name="symptom253" value="44">Spinn
                 })
                 .then((data) => {
                     // Handle the model API response (extract disease and precautions)
-                    const diagnosis = "You may have " + data.prediction + " with a probability of " + data.confidence;
+                    const diagnosis = "You may have " + data.prediction;
                     const precautions = "It will be better if you follow these precautions: "+ data.precaution_1 + ", " +data.precaution_2+ ", "+ data.precaution_3+ ", and "+ data.precaution_4;
                              
 
